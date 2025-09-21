@@ -8,9 +8,9 @@
     </p>
 
     <div class="mt-8">
-        <a href="#about"
+        <a href="/jobs"
             class="px-6 py-3 bg-white text-black rounded-full font-semibold shadow hover:bg-gray-200 transition">
-            Get Started
+            View Jobs
         </a>
     </div>
 </x-layout>

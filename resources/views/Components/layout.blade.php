@@ -48,9 +48,9 @@
 </head>
 
 <body class="min-h-screen flex flex-col scroll-smooth text-white"
-    style="background: linear-gradient(-45deg, #000000, #1f1f1f, #111827, #000000);
-             background-size: 400% 400%;
-             animation: gradientMove 12s ease infinite;">
+    style="background:linear-gradient(-45deg,#000000,#1f1f1f,#111827,#000000);
+           background-size:400% 400%;
+           animation:gradientMove 12s ease infinite;">
 
     <!-- Navigation -->
     <header class="w-full py-5 px-8 bg-black/40 backdrop-blur-md sticky top-0 z-50 shadow-lg">
@@ -58,49 +58,34 @@
             <div class="text-2xl font-extrabold tracking-wide">MySite</div>
             <ul class="flex space-x-8">
                 <li>
-                    <a href="#"
+                    <a href="/"
                         class="relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
                         Home
                     </a>
                 </li>
                 <li>
-                    <a href="#about"
+                    <a href="/jobs"
                         class="relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
-                        About
-                    </a>
-                </li>
-                <li>
-                    <a href="#contact"
-                        class="relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
-                        Contact
+                        Jobs
                     </a>
                 </li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero -->
     <main class="flex-1 flex items-center justify-center px-6">
         <div class="text-center max-w-3xl">
             <h1
-                class="text-5xl md:text-6xl font-extrabold mb-6 opacity-0 translate-y-4
-                       animate-[fadeInUp_1s_ease-out_forwards]
-                       drop-shadow-[0_0_20px_rgba(255,255,255,0.25)]">
+                class="text-5xl md:text-6xl font-extrabold mb-6 opacity-0 translate-y-4 animate-[fadeInUp_1s_ease-out_forwards] drop-shadow-[0_0_20px_rgba(255,255,255,0.25)]">
                 {{ $heading ?? 'Welcome to MySite' }}
             </h1>
-            <p
-                class="text-lg md:text-xl text-gray-300 leading-relaxed opacity-0 translate-y-4
-                      animate-[fadeInUp_1.2s_ease-out_forwards]">
-                {{ $slot ?? 'Discover amazing content and build something great with us.' }}
-            </p>
+            {{ $slot }}
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="py-4 text-center text-gray-400 text-sm">
         © {{ date('Y') }} MySite — All rights reserved.
     </footer>
-
 </body>
 
 </html>
